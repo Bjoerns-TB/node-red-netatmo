@@ -36,7 +36,7 @@
         "type": "function",
         "z": "7ea08eb2.3f545",
         "name": "",
-        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\nvar msg4 = {};\nvar msg5 = {};\n//var msg6 = {}; Netatmo no longer shows trends\nvar msg7 = {};\nvar msg8 = {};\n//var msg9 = {};\nmsg1.payload = msg.payload.temperature;\nmsg2.payload = msg.payload.co2;\nmsg3.payload = msg.payload.humidity;\nmsg4.payload = msg.payload.noise;\nmsg5.payload = msg.payload.pressure;\n//msg6.payload = msg.payload.pressureTrend;\nmsg7.payload = msg.payload.externalTemperature;\nmsg8.payload = msg.payload.externalHumidity;\n//msg9.payload = msg.payload.externalTemperatureTrend;\n//return [msg1,msg2,msg3,msg4,msg5,msg6,msg7,msg8,msg9];\nreturn [msg1,msg2,msg3,msg4,msg5,msg7,msg8];",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\nvar msg4 = {};\nvar msg5 = {};\nvar msg6 = {};\nvar msg7 = {};\nvar msg8 = {};\nvar msg9 = {};\nmsg1.payload = msg.payload.temperature;\nmsg2.payload = msg.payload.co2;\nmsg3.payload = msg.payload.humidity;\nmsg4.payload = msg.payload.noise;\nmsg5.payload = msg.payload.pressure;\n//msg6.payload = msg.payload.pressureTrend;\nmsg7.payload = msg.payload.externalTemperature;\nmsg8.payload = msg.payload.externalHumidity;\n//msg9.payload = msg.payload.externalTemperatureTrend;\nreturn [msg1,msg2,msg3,msg4,msg5,msg6,msg7,msg8,msg9];",
         "outputs": "9",
         "noerr": 0,
         "x": 396,
