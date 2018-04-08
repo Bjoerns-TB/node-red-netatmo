@@ -1,13 +1,8 @@
 [
     {
-        "id": "41e40682.d1d438",
-        "type": "tab",
-        "label": "Netatmo"
-    },
-    {
-        "id": "b367a0d2.58de5",
+        "id": "5f7ddbf8.6be794",
         "type": "inject",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
         "topic": "5 Minutes Timer",
         "payload": "true",
@@ -19,69 +14,65 @@
         "y": 118,
         "wires": [
             [
-                "43b84b9e.d4e8d4"
+                "eac6e5e1.8a4cf8"
             ]
         ]
     },
     {
-        "id": "43b84b9e.d4e8d4",
+        "id": "eac6e5e1.8a4cf8",
         "type": "netatmo-dashboard",
-        "z": "41e40682.d1d438",
-        "creds": "190010fb.a6894f",
+        "z": "7ea08eb2.3f545",
+        "creds": "c0c400e5.eb2b7",
         "x": 195,
         "y": 197,
         "wires": [
             [
-                "99ceba58.a68c58"
+                "8fefe213.0d597"
             ]
         ]
     },
     {
-        "id": "99ceba58.a68c58",
+        "id": "8fefe213.0d597",
         "type": "function",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\nvar msg4 = {};\nvar msg5 = {};\nvar msg6 = {};\nvar msg7 = {};\nvar msg8 = {};\nvar msg9 = {};\nmsg1.payload = msg.payload.temperature;\nmsg2.payload = msg.payload.co2;\nmsg3.payload = msg.payload.humidity;\nmsg4.payload = msg.payload.noise;\nmsg5.payload = msg.payload.pressure;\nmsg6.payload = msg.payload.pressureTrend;\nmsg7.payload = msg.payload.externalTemperature;\nmsg8.payload = msg.payload.externalHumidity;\nmsg9.payload = msg.payload.externalTemperatureTrend;\nreturn [msg1,msg2,msg3,msg4,msg5,msg6,msg7,msg8,msg9];",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\nvar msg4 = {};\nvar msg5 = {};\n//var msg6 = {}; Netatmo no longer shows trends\nvar msg7 = {};\nvar msg8 = {};\n//var msg9 = {};\nmsg1.payload = msg.payload.temperature;\nmsg2.payload = msg.payload.co2;\nmsg3.payload = msg.payload.humidity;\nmsg4.payload = msg.payload.noise;\nmsg5.payload = msg.payload.pressure;\n//msg6.payload = msg.payload.pressureTrend;\nmsg7.payload = msg.payload.externalTemperature;\nmsg8.payload = msg.payload.externalHumidity;\n//msg9.payload = msg.payload.externalTemperatureTrend;\n//return [msg1,msg2,msg3,msg4,msg5,msg6,msg7,msg8,msg9];\nreturn [msg1,msg2,msg3,msg4,msg5,msg7,msg8];",
         "outputs": "9",
         "noerr": 0,
         "x": 396,
         "y": 163,
         "wires": [
             [
-                "214bed19.995ce2"
+                "792029a1.70a838"
             ],
             [
-                "169f3f65.ba57a1"
+                "41d7ab35.1c5824"
             ],
             [
-                "aa238b72.211258"
+                "711b2db6.ba12b4"
             ],
             [
-                "60c32b6f.9e2e34"
+                "76d23f76.5ea99"
             ],
             [
-                "fcda826a.d38a5"
+                "81eed303.c7ba6"
+            ],
+            [],
+            [
+                "fb43741f.9f7928"
             ],
             [
-                "b9a117e5.08c038"
+                "ad327992.52f648"
             ],
-            [
-                "d43e92c0.2dd04"
-            ],
-            [
-                "639dfada.deda34"
-            ],
-            [
-                "a7b74066.5866b"
-            ]
+            []
         ]
     },
     {
-        "id": "214bed19.995ce2",
+        "id": "792029a1.70a838",
         "type": "ui_gauge",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "group": "b88585a0.6bb088",
+        "group": "ee48b025.41027",
         "order": 0,
         "width": "3",
         "height": "3",
@@ -103,11 +94,11 @@
         "wires": []
     },
     {
-        "id": "169f3f65.ba57a1",
+        "id": "41d7ab35.1c5824",
         "type": "ui_gauge",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "group": "b88585a0.6bb088",
+        "group": "ee48b025.41027",
         "order": 0,
         "width": "3",
         "height": "3",
@@ -129,11 +120,11 @@
         "wires": []
     },
     {
-        "id": "aa238b72.211258",
+        "id": "711b2db6.ba12b4",
         "type": "ui_gauge",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "group": "b88585a0.6bb088",
+        "group": "ee48b025.41027",
         "order": 0,
         "width": "3",
         "height": "3",
@@ -155,11 +146,11 @@
         "wires": []
     },
     {
-        "id": "60c32b6f.9e2e34",
+        "id": "76d23f76.5ea99",
         "type": "ui_gauge",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "group": "b88585a0.6bb088",
+        "group": "ee48b025.41027",
         "order": 0,
         "width": "3",
         "height": "3",
@@ -181,11 +172,11 @@
         "wires": []
     },
     {
-        "id": "fcda826a.d38a5",
+        "id": "81eed303.c7ba6",
         "type": "ui_gauge",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "group": "b88585a0.6bb088",
+        "group": "ee48b025.41027",
         "order": 0,
         "width": "3",
         "height": "3",
@@ -207,11 +198,11 @@
         "wires": []
     },
     {
-        "id": "d43e92c0.2dd04",
+        "id": "fb43741f.9f7928",
         "type": "ui_gauge",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "group": "b88585a0.6bb088",
+        "group": "ee48b025.41027",
         "order": 0,
         "width": "3",
         "height": "3",
@@ -233,11 +224,11 @@
         "wires": []
     },
     {
-        "id": "639dfada.deda34",
+        "id": "ad327992.52f648",
         "type": "ui_gauge",
-        "z": "41e40682.d1d438",
+        "z": "7ea08eb2.3f545",
         "name": "",
-        "group": "b88585a0.6bb088",
+        "group": "ee48b025.41027",
         "order": 0,
         "width": "3",
         "height": "3",
@@ -259,39 +250,7 @@
         "wires": []
     },
     {
-        "id": "b9a117e5.08c038",
-        "type": "ui_text",
-        "z": "41e40682.d1d438",
-        "group": "b88585a0.6bb088",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Luftdruck",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 610.5,
-        "y": 217,
-        "wires": []
-    },
-    {
-        "id": "a7b74066.5866b",
-        "type": "ui_text",
-        "z": "41e40682.d1d438",
-        "group": "b88585a0.6bb088",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Außentemperatur",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 641.5,
-        "y": 330,
-        "wires": []
-    },
-    {
-        "id": "190010fb.a6894f",
+        "id": "c0c400e5.eb2b7",
         "type": "netatmo-config-node",
         "z": "",
         "client_id": "yourclientid",
@@ -300,16 +259,16 @@
         "password": "youpassword"
     },
     {
-        "id": "b88585a0.6bb088",
+        "id": "ee48b025.41027",
         "type": "ui_group",
         "z": "",
         "name": "Default",
-        "tab": "346425e8.60fcea",
+        "tab": "49b7c641.ba4788",
         "disp": true,
         "width": "12"
     },
     {
-        "id": "346425e8.60fcea",
+        "id": "49b7c641.ba4788",
         "type": "ui_tab",
         "z": "",
         "name": "Home",
